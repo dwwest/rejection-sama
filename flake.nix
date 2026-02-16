@@ -17,7 +17,7 @@
       packages = forAllSystems (system: {
         default =
           with pkgs.${system};
-          with python39Packages;
+          with python313Packages;
           buildPythonApplication {
             pname = "rejection-sama";
             version = "0.1.0";
