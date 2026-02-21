@@ -47,7 +47,7 @@ async def oops(context, num: int):
         rejections = 0
         await context.reply(f"Rejection-sama cannot give you negative rejections, much as Rejection-sama would like... you are now at 0 rejections.")
     else:
-        await context.reply(f"Rejection-sama has removed {num} rejections!  You are now at {rejections}total rejections.")
+        await context.reply(f"Rejection-sama has removed {num} rejections!  You are now at {rejections} total rejections.")
     rejections_df.loc[rejections_df['Guild'] == guild_id, 'Rejections'] = rejections
     rejections_df.to_csv(rejections_file, index=False)
 
